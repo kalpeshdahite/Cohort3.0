@@ -5,7 +5,7 @@ A clean, structured repository for tracking my web development assignments and p
 ## 📂 Folders
 
 *   📁 **`assignments/`** — Core weekly submissions, projects, and assets.
-*   📁 **`testing/`** — Sandbox for breaking, building, and learning.
+*   📁 **`practice/`** — Practice and learning.
 
 ## 🔗 Live Site
 *   You can view the main dashboard index page live via GitHub Pages.
