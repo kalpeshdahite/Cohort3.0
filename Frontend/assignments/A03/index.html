@@ -9,10 +9,18 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <nav>
+      <div class="container">
+        <nav>
         <img id="logo" src="./images/logo.png" alt="Logo" />
 
         <ul class="nav-links">
@@ -26,20 +34,44 @@
 
         <div class="socials">
           <span><i class="ri-instagram-fill"></i></span>
+          <span><i class="ri-telegram-2-fill"></i></span>
+          <span><i class="ri-discord-fill"></i></span>
         </div>
-      </nav>
+        </nav>
 
       <div class="hero">
         <div class="text">
-          <p>Join the Mystic Adventure</p>
+          <p id="join-text">Join the Mystic Adventure</p>
           <h1>Shinsei Village</h1>
-          <p>Genuine Storytelling Project</p>
+          <p id="Str-text">Genuine Storytelling Project</p>
         </div>
-        <img src="./images/monkey.png" alt="hero" />
-        <button>MINT NOW</button>
+        <div class="hero-img">
+        </div>
+        <button id="mint-button">MINT NOW</button>
+      </div>
       </div>
 
-      <div class="bottom"></div>
+      <section class="vision-section">
+        <h1>Vision</h1>
+        <div class="btmline">  
+        </div>
+        <div class="vision-text">
+          <p>
+            Shinsei Village is a genuine storytelling project that aims to
+            create a unique and immersive experience for its community. Our
+            vision is to build a world where creativity, collaboration, and
+            innovation thrive, and where our members can explore new ideas and
+            express themselves freely.
+          </p>
+          <p>
+            We believe that storytelling is a powerful tool for connecting
+            people and inspiring change. Through our project, we hope to foster
+            a sense of community and belonging, where everyone can contribute to
+            the narrative and shape the future of Shinsei Village.
+          </p>
+        </div>
+      </section>
+
     </main>
   </body>
 </html>
