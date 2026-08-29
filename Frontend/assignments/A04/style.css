@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+  background-color: #675858;
+  display: grid;
+  grid-template-areas:
+    'top-left top-mid menu top-right'
+    'top-left top-mid menu right-image'
+    'barcode mid menu right-image'
+    'barcode btm-mid1 btm-right btm-right'
+    'barcode btm-mid2 btm-right btm-right';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 15% 15% 30% 15% 20%;
+  gap: 5px;
+  
+}
+
+.top-left {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  grid-area: top-left;
+  object-fit: cover;
+  background-color: #d92727;
+}
+
+.logo {
+  grid-area: top-mid;
+  width: 100%;
+  height: 100%;
+  background-color: #e3d614;
+}
+
+.menu {
+  height: 100%;
+  width: 100%;
+  grid-area: menu;
+  background-color: #61e12e;
+}
+
+.top-right {
+  height: 100%;
+  width: 100%;
+  grid-area: top-right;
+  background-color: #2d9cd3;
+}
+
+.barcode {
+  height: 100%;
+  width: 100%;
+  grid-area: barcode;
+  background-color: #8d21df;
+}
+
+.mid {
+  height: 100%;
+  width: 100%;
+  grid-area: mid;
+  background-color: #ae3e4b;
+}
+
+.btm-mid1 {
+  height: 100%;
+  width: 100%;
+  grid-area: btm-mid1;
+  background-color: #d4b8b8;
+}
+
+.btm-mid2 {
+  height: 100%;
+  width: 100%;
+  grid-area: btm-mid2;
+  background-color: #dba528;
+}
+
+.btm-right {
+  height: 100%;
+  width: 100%;
+  grid-area: btm-right;
+  background-color: #2eb8ca;
+}
+
+.right-image {
+  height: 100%;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  grid-area: right-image;
+  object-fit: cover;
+  background-color: #e3ed7c;
+}
+
