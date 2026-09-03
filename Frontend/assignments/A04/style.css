@@ -5,6 +5,7 @@
   --white: #FEFEFE;
   --pitch: #070707;
   --greyyy: #6A676B;
+  --hovering:#29282D;
 }
 
 * {
@@ -44,22 +45,26 @@ main {
     'barcode mid menu right-image'
     'barcode btm-mid1 btm-right btm-right'
     'barcode btm-mid2 btm-right btm-right';
-  grid-template-columns: 30% 20% 20% 30% ;
+  grid-template-columns: 28% 24% 20% 28% ;
   grid-template-rows: 15% 15% 30% 15% 20%;
   gap: 10px;
-  padding: 40px;
+  padding: 40px 200px;
 }
 
-.top-left {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.top-left{
   grid-area: top-left;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 20px;
   background-color: var(--purple);
-  
+  position: relative;
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center bottom;
+    display: block;
+  }
 }
 
 .logo {
@@ -68,25 +73,37 @@ main {
   grid-area: top-mid;
   display: flex;
   justify-content: center;
-  object-fit: cover;
   border-radius: 20px;
   background-color: var(--black);
+  padding: 10px;
 }
 
 .menu {
+  grid-area: menu;
   height: 100%;
   width: 100%;
   font-size: 1.3rem;
   text-transform: uppercase;
-  grid-area: menu;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  gap: 20px;
+  padding: 20px;
   border-radius: 20px;
   color: var(--white);
   background-color: var(--black);
+  i{
+    margin-right: 10px;
+  }
+  a:hover{
+    background-color: var(--hovering);
+    border-radius: 15px;
+    padding: 5px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+    i{
+      color: var(--lime);
+    }
+  }
 }
 
 .top-right {
@@ -94,12 +111,51 @@ main {
   width: 100%;
   grid-area: top-right;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  padding: 20px;
   color: var(--white);
   background-color: var(--purple);
+  #leftside{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    i{
+      font-size: 2.3rem;
+      color: var(--white);
+      margin-right: 5px;
+    }
+    p{
+      font-size: 0.1rem;
+      font-weight: 300;
+    }
+  }
+  #separator{
+    height: 60%;
+    width: 2px;
+    background-color: var(--white);
+    margin: 0 10px;
+  }
+  #rightside{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    i{
+      font-size: 2.3rem;
+      color: var(--white);
+      margin-right: 5px;
+    }
+    p{
+      font-size: 0.1rem;
+      font-weight: 300;
+    }
+  }
 }
 
 .barcode {
@@ -115,7 +171,8 @@ main {
   padding: 20px;
   h1{
     color: var(--white);
-    font-weight: 700;
+    font-weight: bold;
+    letter-spacing: -1;
     font-size: 6rem;
     text-transform: uppercase;
     font-family: 'Bebas Neue';
@@ -124,9 +181,7 @@ main {
     color: var(--purple);
     font-weight: 400;
     text-transform: uppercase;
-    font-family: 'Inter';
-    margin-top: -10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   p{
     color: var(--white);
@@ -136,7 +191,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    width: 50%;
+    width: 80%;
   }
   .ri-bit-coin-line{
     color: var(--lime);
@@ -145,7 +200,7 @@ main {
   }
   .ri-barcode-line{
     color: var(--white);
-    font-size: 5rem;
+    font-size: 4rem;
     height: 100%;
     width: 100%;
   }
@@ -159,6 +214,38 @@ main {
   color: var(--white);
   padding: 20px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  #addr{
+    display: flex;
+    flex-direction: row;
+    
+    gap: 10px;
+    i{
+      font-size: 1rem;
+      background-color: var(--lime);
+      color: var(--pitch);
+      padding: 5px;
+      border-radius: 50%;
+    }
+    p{
+      width: 50%;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--greyyy);
+    }
+  }
+  h3{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  #site{
+    font-size: 0.5rem;
+    color: var(--greyyy);
+    margin-top: 10px;
+  }
 }
 
 .btm-mid1 {
@@ -167,10 +254,11 @@ main {
   grid-area: btm-mid1;
   background-color: var(--black);
   color: var(--white);
-  i{
-    font-size: 4rem;
-  }
+  font-size: 3.5rem;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btm-mid2 {
@@ -179,31 +267,115 @@ main {
   grid-area: btm-mid2;
   background-color: var(--lime);
   border-radius: 20px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 2px;
+  gap: 5px;
+  .contents{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    h4{
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    p{
+      font-size: 1px;
+      font-weight: 600;
+    }
+  }
+  .ri-qr-code-line{
+    font-size: 4rem;
+  }
+  .ri-arrow-right-up-line{
+    font-size: 1.2rem;
+    place-self: flex-start;
+    margin-top: 30px;
+  }
 }
 
-.btm-right {
+
+.btm-right { 
   height: 100%;
   width: 100%;
   grid-area: btm-right;
   background-color: var(--white);
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 80px;
   h1{
     color: var(--black);
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-family: 'Bebas Neue';
+    transform: scale(1.1);
   }
 }
-
-.right-image {
-  height: 100%;
-  width: 100%;
+.leftcont{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  grid-area: right-image;
-  object-fit: fill;
-  background-color: var(--lime);
-  border-radius: 20px;
+  gap: 60px;
+  h1{
+    line-height: 1.2;
+    font-family: 'Inter';
+    font-weight: 500;
+  }
+  p{
+    font-weight: 500;
+    font-style: bold;
+  }
+}
+.rightcont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p{
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  #stars{
+    font-size: 1.5rem;
+    color:var(--lime)
+  }
+  #reviews{
+    height:40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: var(--purple);
+    color: var(--white);
+    i{
+    font-size: 1.5rem;
+    margin-left: 5px;
+    }
+  }
+  
 }
 
+
+.right-image {
+  grid-area: right-image;
+  border-radius: 20px;
+  background-color: var(--lime);
+  position: relative;
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center bottom;
+    display: block;
+  }
+}
