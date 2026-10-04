@@ -9,4 +9,4 @@ A clean, structured repository for tracking my web development assignments and p
 
 ## 🔗 Live Site
 *   You can view the main dashboard index page live via GitHub Pages.
-*   https://kalpeshdahite.github.io/Cohort3.0/
+*   [https://kalpeshdahite.github.io/Cohort3.0/](https://kalpeshdahite-cohort3-0.vercel.app/)
