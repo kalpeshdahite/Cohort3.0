@@ -45,7 +45,7 @@ main {
     'barcode mid menu right-image'
     'barcode btm-mid1 btm-right btm-right'
     'barcode btm-mid2 btm-right btm-right';
-  grid-template-columns: 28% 24% 20% 28% ;
+  grid-template-columns: 28% 24% 20% 28%;
   grid-template-rows: 15% 15% 30% 15% 20%;
   gap: 10px;
   padding: 40px 200px;
